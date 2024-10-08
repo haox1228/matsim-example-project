@@ -29,6 +29,15 @@
 			<url>https://repo.osgeo.org/repository/release/</url>
 		</repository>
 		<repository>
+			<id>pt2matsim</id>
+			<url>https://repo.matsim.org/repository/matsim/</url>
+		</repository>
+		<repository>
+			<id>pt2matsim</id>
+			<url>https://repo.matsim.org/repository/matsim/</url>
+		</repository>
+
+		<repository>
 			<!-- Repository for MATSim (MATSim is not on Maven central, releases and snapshots) -->
 			<id>matsim</id>
 			<url>https://repo.matsim.org/repository/matsim</url>
@@ -119,6 +128,11 @@
 			<version>${matsim.version}</version>
 		</dependency>
 		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-csv</artifactId>
+			<version>1.9.0</version>
+		</dependency>
+		<dependency>
 			<groupId>org.matsim.contrib</groupId>
 			<artifactId>bicycle</artifactId>
 			<version>${matsim.version}</version>
@@ -128,6 +142,17 @@
 			<artifactId>emissions</artifactId>
 			<version>${matsim.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>org.matsim.contrib</groupId>
+			<artifactId>signals</artifactId>
+			<version>${matsim.version}</version>
+		</dependency>
+
+<!--		<dependency>-->
+<!--			<groupId>org.matsim</groupId>-->
+<!--			<artifactId>pt2matsim</artifactId>-->
+<!--			<version>23.4</version>-->
+<!--		</dependency>-->
 		<dependency>
 			<groupId>org.matsim.contrib</groupId>
 			<artifactId>application</artifactId>
