@@ -57,7 +57,7 @@ public class RunMatsim{
 
 		Config config;
 		if ( args==null || args.length==0 || args[0]==null ){
-			config = ConfigUtils.loadConfig( "D:\\HAYSTAC\\Simulation results\\Irbid\\config004.xml" );
+			config = ConfigUtils.loadConfig( "E:\\PHD\\matsim-example-project\\src\\main\\java\\org\\matsim\\project\\config004.xml" );
 		} else {
 			config = ConfigUtils.loadConfig( args );
 		}

@@ -28,14 +28,6 @@
 			<!-- <url>http://download.osgeo.org/webdav/geotools</url> -->
 			<url>https://repo.osgeo.org/repository/release/</url>
 		</repository>
-		<repository>
-			<id>pt2matsim</id>
-			<url>https://repo.matsim.org/repository/matsim/</url>
-		</repository>
-		<repository>
-			<id>pt2matsim</id>
-			<url>https://repo.matsim.org/repository/matsim/</url>
-		</repository>
 
 		<repository>
 			<!-- Repository for MATSim (MATSim is not on Maven central, releases and snapshots) -->
@@ -148,11 +140,6 @@
 			<version>${matsim.version}</version>
 		</dependency>
 
-<!--		<dependency>-->
-<!--			<groupId>org.matsim</groupId>-->
-<!--			<artifactId>pt2matsim</artifactId>-->
-<!--			<version>23.4</version>-->
-<!--		</dependency>-->
 		<dependency>
 			<groupId>org.matsim.contrib</groupId>
 			<artifactId>application</artifactId>
@@ -183,6 +170,33 @@
 				<configuration>
 					<downloadSources>true</downloadSources>
 					<downloadJavadocs>true</downloadJavadocs>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+<!--				<version>3.1.2</version>-->
+				<configuration>
+					<archive>
+						<manifest>
+							<mainClass>org.matsim.project.RunMatsim</mainClass> <!-- Your main class -->
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>3.4.1</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>java</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<mainClass>org.matsim.project.RunMatsim</mainClass> <!-- Replace with your main class -->
 				</configuration>
 			</plugin>
 			<plugin>
